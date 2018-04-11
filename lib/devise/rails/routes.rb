@@ -225,7 +225,7 @@ module ActionDispatch::Routing
     #
     def devise_for(*resources)
       @devise_finalized = false
-      raise_no_secret_key unless Devise.secret_key
+      # raise_no_secret_key unless Devise.secret_key
       options = resources.extract_options!
 
       options[:as]          ||= @scope[:as]     if @scope[:as].present?
